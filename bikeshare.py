@@ -200,6 +200,15 @@ def display_data(df,a,b):
         if user_choice not in ("yes","no"):
             print("\nPlease, you must choose between 'yes' or 'no'")
             continue
+    #  Display 5 lines of raw data
+        if user_choice == "yes":
+            raw_data = df.iloc[a:b]
+            print(raw_data)
+            a = b
+            b = b+5
+            continue
+        if user_choice == "no":
+            break
 
 
 def main():
