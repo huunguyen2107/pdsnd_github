@@ -1,7 +1,7 @@
 ### Date created
 05/16/2023
 ### Project Title
-Udacity project 
+Udacity project - Introduction to version control
 ### Description
 This project allow users to explore data related to bikeshare in three United States cities Chicago, New York city and Washington. Code was written by python 3 and used numpy and pandas libraries.
 ### Files used
