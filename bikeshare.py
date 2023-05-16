@@ -190,6 +190,27 @@ def user_stats(df):
     print('-' * 40)
 
 
+def display_data(df,a,b):
+    """Display 5 lines of raw data each time the user says "yes" and stop displaying when he says "no" """
+
+    while True:
+        #Get user input on wether he wants to display raw data
+        user_choice = input("\nWould you like to see raw data ? Type 'yes' to display 5 lines of raw data or 'no' to stop the display.\n")
+        user_choice = user_choice.lower()
+        if user_choice not in ("yes","no"):
+            print("\nPlease, you must choose between 'yes' or 'no'")
+            continue
+    #  Display 5 lines of raw data
+        if user_choice == "yes":
+            raw_data = df.iloc[a:b]
+            print(raw_data)
+            a = b
+            b = b+5
+            continue
+        if user_choice == "no":
+            break
+
+
 def main():
     while True:
         city, month, day = get_filters()
@@ -207,5 +228,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
